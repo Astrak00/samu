@@ -29,7 +29,7 @@ export function WorkoutGrid({ savedOnly = false }: WorkoutGridProps) {
         headers['Authorization'] = `Bearer ${token}`;
       }
 
-      const response = await fetch(`http://localhost:15000${endpoint}`, { headers });
+      const response = await fetch(`http://194.164.166.135:15000${endpoint}`, { headers });
       const data = await response.json();
       setWorkouts(data);
     } catch (error) {

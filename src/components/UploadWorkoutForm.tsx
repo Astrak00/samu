@@ -37,7 +37,7 @@ export function UploadWorkoutForm() {
     }
 
     try {
-      const response = await fetch('http://localhost:15000/api/workouts', {
+      const response = await fetch('http://194.164.166.135:15000/api/workouts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:15000/api';
+const API_URL = 'http://194.164.166.135:15000/api';
 
 interface ApiResponse {
   success: boolean;

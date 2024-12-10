@@ -41,7 +41,7 @@ export function Comments({ recipeId, workoutId }: CommentsProps) {
     try {
       const type = recipeId ? 'recipe' : 'workout';
       const id = recipeId || workoutId;
-      const response = await fetch(`http://localhost:15000/api/comments/${type}/${id}`);
+      const response = await fetch(`http://194.164.166.135:15000/api/comments/${type}/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch comments');
       }
@@ -58,7 +58,7 @@ export function Comments({ recipeId, workoutId }: CommentsProps) {
     if (!comment.trim() || !token) return;
 
     try {
-      const response = await fetch('http://localhost:15000/api/comments', {
+      const response = await fetch('http://194.164.166.135:15000/api/comments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export function Comments({ recipeId, workoutId }: CommentsProps) {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:15000/api/comments/${commentId}/vote`, {
+      const response = await fetch(`http://194.164.166.135:15000/api/comments/${commentId}/vote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ export function Comments({ recipeId, workoutId }: CommentsProps) {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:15000/api/comments/${commentId}`, {
+      const response = await fetch(`http://194.164.166.135:15000/api/comments/${commentId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

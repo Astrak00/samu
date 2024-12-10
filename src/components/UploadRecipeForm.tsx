@@ -30,7 +30,7 @@ export function UploadRecipeForm() {
     }
 
     try {
-      const response = await fetch('http://localhost:15000/api/recipes', {
+      const response = await fetch('http://194.164.166.135:15000/api/recipes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -31,7 +31,7 @@ export function RecipeDetails() {
 
   const fetchRecipe = async () => {
     try {
-      const response = await fetch(`http://localhost:15000/api/recipes/${id}`);
+      const response = await fetch(`http://194.164.166.135:15000/api/recipes/${id}`);
       if (!response.ok) {
         throw new Error('Recipe not found');
       }
@@ -52,7 +52,7 @@ export function RecipeDetails() {
 
     setSaveLoading(true);
     try {
-      const response = await fetch(`http://localhost:15000/api/recipes/${id}/save`, {
+      const response = await fetch(`http://194.164.166.135:15000/api/recipes/${id}/save`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
