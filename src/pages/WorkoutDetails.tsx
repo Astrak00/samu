@@ -30,7 +30,7 @@ export function WorkoutDetails() {
 
   const fetchWorkout = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/workouts/${id}`);
+      const response = await fetch(`http://localhost:15000/api/workouts/${id}`);
       if (!response.ok) {
         throw new Error('Workout not found');
       }
@@ -51,7 +51,7 @@ export function WorkoutDetails() {
 
     setSaveLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/workouts/${id}/save`, {
+      const response = await fetch(`http://localhost:15000/api/workouts/${id}/save`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

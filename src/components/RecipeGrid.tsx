@@ -29,7 +29,7 @@ export function RecipeGrid({ savedOnly = false }: RecipeGridProps) {
         headers['Authorization'] = `Bearer ${token}`;
       }
 
-      const response = await fetch(`http://localhost:5000${endpoint}`, { headers });
+      const response = await fetch(`http://localhost:15000${endpoint}`, { headers });
       const data = await response.json();
       setRecipes(data);
     } catch (error) {
