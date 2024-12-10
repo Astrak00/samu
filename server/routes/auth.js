@@ -61,7 +61,7 @@ router.post('/signin', async (req, res) => {
       .populate('savedWorkouts');
 
     if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+     return res.status(404).json({ message: 'User not found' });
     }
 
     // Check password

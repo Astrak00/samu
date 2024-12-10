@@ -38,6 +38,9 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 15000;
+
+app.use(cors({ origin: "*", credentials: false }));
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
