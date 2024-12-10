@@ -1,0 +1,12 @@
+image: node:16
+
+pages:
+  script:
+    - npm install
+    - npm run build # Build the project
+    - mv dist public # Move the output folder to public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main # Replace with your default branch if different
